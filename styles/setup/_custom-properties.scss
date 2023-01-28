@@ -1,0 +1,50 @@
+:root {
+    /* ---------- Sizes ---------- */
+    --html-min-width: 360px;
+    --html-max-width: 1920px;
+    --container: 1200px;
+
+    /* ---------- Colors ---------- */
+    --color-1: #ffffff;
+    --color-2: #383838;
+    --color-3: #199a35;
+    --color-4: #efefef;
+    --color-5: #afafaf;
+
+    --btn-1: #ffffff;
+    --btn-2: #383838;
+    --btn-3: #199a35;
+    --btn-4: #0c5c1d;
+    --btn-5: #084916;
+    --btn-6: #d9d9d9;
+    --btn-7: #61a16f;
+
+    --error: #ff0000;
+
+    --bg-1: #ffffff;
+    --bg-2: #383838;
+    --bg-3: #199a35;
+    --bg-4: #afafaf;
+    --bg-5: #efefef;
+
+
+    /* ---------- Typography ---------- */
+    --font-family: "Lato", sans-serif;
+
+    // --font-size-small-semi: 10px;
+    --font-size-small-maxi: 12px;
+    --font-size-medium-mini: 14px;
+    --font-size-medium: 16px;
+    --font-size-medium-semi: 18px;
+    --font-size-medium-maxi: 20px;
+    --font-size-large-mini: 22px;
+    --font-size-large: 24px;
+    // --font-size-large-semi: 26px;
+    --font-size-big-mini: 28px;
+    --font-size-big: 30px;
+    --font-size-big-semi: 32px;
+    --font-size-big-maxi: 34px;
+    // --font-size-huge: 36px;
+    --font-size-giant: 40px;
+    --font-size-main-title: 50px;
+}

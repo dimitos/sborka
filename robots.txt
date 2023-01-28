@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /node_modules
+Clean-param: roistat&roistat_referrer&roistat_pos&rs&utm_source&utm_campaign&utm_term&utm_medium&utm_content /*
+Host: https://garantiya.intopweb.ru
+Sitemap: https://garantiya.intopweb.ru/sitemap.xml

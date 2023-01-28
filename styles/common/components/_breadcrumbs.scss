@@ -1,0 +1,63 @@
+// ----- Breadcrumb
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 24px 0 18px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--color-2);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    @include from-laptop {
+        padding: 24px 0 28px;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+    &::-webkit-scrollbar-track {
+        display: none;
+    }
+}
+.breadcrumbs__text {
+    font-size: 12px;
+    line-height: 160%;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.breadcrumbs__link {
+    position: relative;
+    display: block;
+    padding-right: 24px;
+    font-size: 12px;
+    line-height: 160%;
+    white-space: nowrap;
+    transition: color .2s ease;
+}
+@media (hover: hover) {
+    .breadcrumbs__link:hover {
+        color: var(--color-3);
+    }
+}
+.breadcrumbs__link::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    right: 11px;
+    width: 5px;
+    height: 5px;
+    transform: rotate(-45deg);
+    border-bottom: 1px solid #afafaf;
+    border-right: 1px solid #afafaf;
+    @include from-laptop {
+        top: 7px;
+        width: 6px;
+        height: 6px;
+    }
+}

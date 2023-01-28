@@ -1,0 +1,25 @@
+.thanks-modal {
+    width: 97vw;
+    height: 90vh;
+    max-width: 490px;
+    min-width: 320px;
+    max-height: 200px;
+    padding: 20px 40px;
+    overflow: auto;
+    @include from-laptop {
+        max-width: 580px;
+        max-height: 276px;
+        padding: 30px 60px;
+    }
+}
+.thanks-modal__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.thanks-modal__title {
+    color: var(--color-1);
+    text-align: center;
+}

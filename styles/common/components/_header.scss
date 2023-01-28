@@ -1,0 +1,212 @@
+.header-desc {
+    position: fixed;
+    z-index: 900;
+    transform: translate3d(0, 0, 900px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 59px;
+    background-color: var(--bg-2);
+    transition: background-color .2s ease, height .2s ease;
+    @include from-tablet {
+        height: 108px;
+        padding: 11px 0 11px 0;
+        background-color: var(--bg-1);
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    }
+}
+.header-wrap {
+    display: none;
+    @include from-tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.header__logo_white {
+    display: none;
+}
+.header__logo-icon {
+    @include from-tablet {
+        width: 101px;
+        height: 86px;
+        transition: width .2s ease, height .2s ease;
+    }
+}
+.header__phone {
+    @include from-tablet {
+        font-weight: 500;
+        font-size: var(--font-size-medium-maxi);
+        line-height: 120%;
+        color: var(--color-2);
+        transition: color .2s ease;
+        @media (hover: hover) {
+            &:hover {
+                color: var(--color-3);
+            }
+        }
+    }
+}
+.header.header-tr.header__light .header-desc {
+    @include from-tablet {
+        background: transparent;
+        box-shadow: none;
+        .header__logo_white {
+            display: block;
+        }
+        .header__logo_black {
+            display: none;
+        }
+        .header__phone {
+            color: var(--color-1);
+        }
+    }
+}
+.header.header-xs .header-desc {
+    @include from-tablet {
+        height: 59px;
+        padding: 6px 0 6px 0;
+        .header__logo-icon {
+            width: 55px;
+            height: 46px;
+        }
+    }
+}
+.header-mob {
+    position: fixed;
+    z-index: 905;
+    transform: translate3d(0, 0, 905px);
+    top: 0;
+    left: 0;
+    height: 59px;
+    width: 100%;
+    background-color: var(--bg-2);
+    @include from-tablet {
+        top: 0;
+        height: 100vh;
+        width: 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(2px);
+        transition: background-color .2s ease;
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--bg-2);
+            }
+        }
+    }
+}
+.header-mob__wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 16px;
+    @include from-tablet {
+        flex-direction: column;
+        padding: 21px 0;
+    }
+}
+.header-mob__link {
+    pointer-events: none;
+}
+.header-mob__logo {
+    @include from-tablet {
+        display: none;
+    }
+    .header-mob__logo-icon {
+        width: 47px;
+        height: 40px;
+    }
+}
+.header-mob__closer {
+    stroke: var(--btn-1);
+    cursor: pointer;
+    @include from-tablet {
+        margin: 0 0 24px 0;
+    }
+    .header-mob__icon-burger {
+        width: 23px;
+        height: 16px;
+    }
+    .header-mob__icon-closer {
+        display: none;
+        width: 23px;
+        height: 22px;
+    }
+    &.active .header-mob__icon-burger {
+        display: none;
+    }
+    &.active .header-mob__icon-closer {
+        display: block;
+    }
+}
+.header-mob__select {
+    fill: var(--btn-1);
+    .header-mob__icon {
+        width: 25px;
+        height: 25px;
+        fill: var(--btn-1);
+    }
+    @include from-tablet {
+        margin: 24px 0;
+    }
+}
+.header-mob__favorites {
+    .header-mob__icon {
+        width: 25px;
+        height: 21px;
+        fill: var(--btn-1);
+    }
+    @include from-tablet {
+        margin: 24px 0;
+    }
+    .header-mob__link {
+        position: relative;
+    }
+    &.favorites-true .header-mob__link::before {
+        position: absolute;
+        content: "";
+        z-index: 2;
+        transform: translate3d(0, 0, 2px);
+        width: 10px;
+        height: 10px;
+        top: -4px;
+        right: -3px;
+        border-radius: 50%;
+        background-color: #a70000;
+    }
+}
+.header-mob__user {
+    display: none;
+    .header-mob__icon {
+        @include from-tablet {
+            width: 23px;
+            height: 24px;
+            fill: var(--btn-1);
+        }
+    }
+    @include from-tablet {
+        display: block;
+        margin: 24px 0 0 0;
+    }
+}
+.header-mob__phone {
+    .header-mob__icon {
+        width: 24px;
+        height: 23px;
+        fill: var(--btn-1);
+    }
+    @include from-tablet {
+        display: none;
+    }
+}
+.header-mob__line {
+    display: none;
+    @include from-tablet {
+        display: block;
+        border-left: 1px solid var(--bg-1);
+        flex: 1;
+        pointer-events: none;
+    }
+}

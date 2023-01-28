@@ -1,0 +1,114 @@
+.location {
+    color: var(--color-1);
+    overflow: hidden;
+}
+.location-slider {
+    height: 231px;
+    max-width: 420px;
+    margin: 0 -16px;
+    overflow: initial;
+    @include from-fablet {
+        margin: 0 auto;
+    }
+    @include from-tablet {
+        height: 35.4vw;
+        max-width: 53.5vw;
+    }
+    @include from-desktop {
+        height: 538px;
+        max-width: 813px;
+    }
+    .swiper-slide {
+        position: relative;
+        z-index: 1;
+        transform: translate3d(0, 0, 1px);
+        padding: 18px 10px;
+        overflow: hidden;
+        cursor: pointer;
+        @include from-desktop {
+            padding: 24px 25px;
+        }
+        @media (hover: hover) {
+            &:hover .location-slide__image {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .location-slide__image {
+        position: absolute;
+        z-index: 2;
+        transform: translate3d(0, 0, 2px);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        transition: transform 1s ease;
+    }
+    .location-slide__wrap {
+        position: relative;
+        z-index: 3;
+        transform: translate3d(0, 0, 3px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid var(--bg-1);
+    }
+    .location-slide__title {
+        margin-bottom: 12px;
+        font-weight: 800;
+        font-size: var(--font-size-big-mini);
+        line-height: 120%;
+        text-transform: uppercase;
+        @include from-laptop {
+            margin-bottom: 14px;
+            font-size: var(--font-size-big-semi);
+        }
+        @include from-notebook {
+            font-size: var(--font-size-giant);
+        }
+        @include from-desktop {
+            margin-bottom: 16px;
+            font-size: var(--font-size-main-title);
+        }
+    }
+    .location-slide__text {
+        font-weight: 500;
+        font-size: var(--font-size-medium-maxi);
+        line-height: 120%;
+        @include from-laptop {
+            font-size: var(--font-size-large);
+        }
+        @include from-notebook {
+            font-size: var(--font-size-giant);
+        }
+        @include from-desktop {
+            margin-bottom: 12px;
+            font-size: var(--font-size-big-maxi);
+        }
+    }
+}
+.location-slider__pagination {
+    margin: 10px 0 -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .swiper-pagination-bullet {
+        width: 42px;
+        margin: 8px 13px !important;
+        @media (hover: hover) {
+            &:hover  {
+                background-color: var(--btn-3);
+            }
+        }
+    }
+    @include from-fablet {
+        display: none;
+    }
+}

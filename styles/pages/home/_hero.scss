@@ -1,0 +1,210 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 590px;
+    max-height: 740px;
+    margin-bottom: 20px;
+    color: var(--color-1);
+    @include from-tablet {
+        padding-top: 108px;
+    }
+    @include from-notebook {
+        max-height: 700px;
+        min-height: 610px;
+    }
+    @include from-desktop {
+        min-height: 720px;
+        margin-bottom: 26px;
+        max-height: 970px;
+    }
+}
+.hero__image-bg {
+    position: absolute;
+    z-index: 1;
+    transform: translate3d(0, 0, 1px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero__image-bg::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, 0, 2px);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000000, 0.15);
+    pointer-events: none;
+}
+.hero__image-bg .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero__container {
+    position: relative;
+    z-index: 3;
+    transform: translate3d(0, 0, 3px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.hero__middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding-top: 90px;
+    @include from-fablet {
+        padding-top: 0;
+    }
+}
+.hero__title {
+    margin-bottom: 16px;
+    font-size: var(--font-size-big);
+    line-height: 120%;
+    text-transform: uppercase;
+    @include from-tablet {
+        font-size: var(--font-size-giant);
+    }
+    @include from-laptop {
+        font-size: var(--font-size-main-title);
+    }
+}
+.hero__text {
+    max-width: 564px;
+    margin-bottom: 24px;
+    font-size: var(--font-size-medium);
+    line-height: 140%;
+    @include from-tablet {
+        margin-bottom: 32px;
+    }
+    @include from-laptop {
+        font-size: var(--font-size-medium-semi);
+    }
+}
+.hero__btn {
+    width: 100%;
+    max-width: 400px;
+    @include from-fablet {
+        width: 222px;
+    }
+}
+.hero__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px 0 36px 0;
+    @include from-fablet {
+        padding: 40px 0 22px 0;
+    }
+}
+.hero__bottom-link {
+    margin: 0 0 16px 0;
+    font-size: var(--font-size-medium);
+    line-height: 120%;
+    text-decoration: underline;
+    @include from-tablet {
+        margin: 0 0 20px auto;
+    }
+    @media (hover: hover) {
+        &:hover {
+            color: var(--color-3);
+        }
+    }
+}
+.hero__bottom-wrap {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    margin: 0 -16px;
+    padding: 0 4px;
+    @include from-tablet {
+        margin: 0 -5px;
+        padding: 0;
+    }
+    @include from-laptop {
+        margin: 0 -16px;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+}
+.hero__bottom-item {
+    width: 259px;
+    min-width: 259px;
+    height: 147px;
+    margin: 0 12px;
+    padding: 0;
+    @include from-tablet {
+        width: calc(100% / 3);
+        min-width: none;
+        margin: 0;
+        padding: 0 5px;
+    }
+    @include from-laptop {
+        padding: 0 16px;
+    }
+    @media (hover: hover) {
+        &:hover .hero__bottom-item-bg .image {
+            transform: scale(1.1);
+        }
+        &:hover .hero__bottom-item-bg::before {
+            background-color: rgba(#000000, 0.5);
+        }
+    }
+}
+.hero__bottom-item-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    cursor: pointer;
+}
+.hero__bottom-item-bg {
+    position: absolute;
+    z-index: 4;
+    transform: translate3d(0, 0, 4px);
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+}
+.hero__bottom-item-bg .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+.hero__bottom-item-bg::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transform: translate3d(0, 0, 5px);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000000, 0.15);
+    transition: background-color 1s ease;
+    pointer-events: none;
+}
+.hero__bottom-title {
+    position: relative;
+    z-index: 6;
+    transform: translate3d(0, 0, 6px);
+    top: 0;
+    left: 0;
+    text-align: center;
+}
