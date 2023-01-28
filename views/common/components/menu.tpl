@@ -1,4 +1,4 @@
-<div class="menu">
+{* <div class="menu">
     <div class="menu-top">
         <div class="container container-84">
             <div class="menu-top__wrap">
@@ -78,4 +78,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> *}

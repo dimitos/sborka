@@ -6,7 +6,7 @@
 cache/
 /vendor/
 /dist/
-/video/original/
+/video/
 .env
 .env.dev
 Makefile
